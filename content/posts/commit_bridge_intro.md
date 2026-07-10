@@ -42,6 +42,28 @@ has truly been a precious learning experience.
 
 ## Development challenges
 
+{% mermaid() %}
+flowchart TD
+    User[fa:fa-user User]
+    User ----> API
+    subgraph CommitBridge
+        API[🧵 REST API] ---> subscriptions
+        subscriptions(fa:fa-database subscriptions)
+        branches(fa:fa-database branches)
+        trigger_queue(fa:fa-database trigger queue)
+        TriggerEngine[🧵 Trigger Engine]
+        PollingEngine[🧵 Polling Engine]
+        subscriptions -->|upsert| branches
+        subscriptions --> TriggerEngine
+        branches --> PollingEngine
+        PollingEngine --> trigger_queue
+        trigger_queue --> TriggerEngine
+    end
+    
+    TriggerEngine ----> GitHubApi[GitHub API]
+    PollingEngine ---->|git ls-remote| GitRepositories[Git Repositories]
+{% end %}
+
 The idea is simple:
 the server monitors some branches,
 and when an update is available,
