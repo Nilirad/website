@@ -7,24 +7,35 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Enable HTML minification to optimize performance
+minify_html = true
+
 theme = "tabi"
 
 title = "Nilirad's place"
+
+[search]
+index_format = "elasticlunr_json"
 
 [markdown]
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
+style = "class"
 
 [extra]
 # Put all your custom variables here
-math_display = "mathjax"
-avatar = "cat_avatar_resized.png"
-social_links = []
 menu = [
-    { name = "blog", url = "posts", trailing_slash = true },
+    { name = "blog", url = "blog", trailing_slash = true },
     { name = "about", url = "about", trailing_slash = true },
 ]
+
+# Social media links for the footer
+socials = [
+    { name = "github", url = "https://github.com/Nilirad", icon = "github" }
+]
+
+# Content Security Policy (CSP) headers config
 allowed_domains = [
     { directive = "font-src", domains = ["'self'", "data:", "https://cdnjs.cloudflare.com"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
@@ -34,11 +45,7 @@ allowed_domains = [
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
 ]
 
-[extra.sections]
-posts = true
-about = true
-archive = false
-tags = false
-links = false
-
-social_links = []
+# microformats2 / h-card configuration
+[extra.hcard]
+enable = true
+avatar = "cat_avatar_resized.png"

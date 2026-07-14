@@ -76,4 +76,4 @@ remain the driving force behind my career.
 [Feathers Inspector]: https://github.com/alice-i-cecile/feathers_inspector
 [`ggez`]: https://ggez.rs/
 [`lyon`]: https://github.com/nical/lyon
-[CommitBridge]: @/posts/commit_bridge_intro.md
+[CommitBridge]: @/blog/commit_bridge_intro.md
