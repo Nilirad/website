@@ -1,6 +1,7 @@
 +++
 title = "About"
-template = "about.html"
+template = "info-page.html"
+path = "about"
 +++
 
 I am a software developer

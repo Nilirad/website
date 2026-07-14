@@ -1,6 +1,9 @@
 +++
 title = "What I learned about backend development from a greenfield project"
-date = 2026-07-04
+date = 2026-07-14
+
+[extra]
+mermaid = true
 +++
 
 I spent the last three months creating
