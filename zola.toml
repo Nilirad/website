@@ -7,12 +7,61 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "nivis"
+# Enable HTML minification to optimize performance
+minify_html = true
+
+theme = "tabi"
+
+title = "Nilirad's place"
+
+[search]
+index_format = "elasticlunr_json"
 
 [markdown]
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
+style = "class"
 
 [extra]
 # Put all your custom variables here
+menu = [
+    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "about", url = "about", trailing_slash = true },
+]
+
+# Appearance
+skin = "mint"
+
+# Table of Contents (ToC)
+toc = true
+
+# Remote Repository Integration
+remote_repository_url = "https://github.com/Nilirad/website"
+remote_repository_git_platform = "auto"
+remote_repository_branch = "main"
+show_remote_changes = true
+show_remote_source = true
+
+# Post Navigation
+show_previous_next_article_links = true
+
+# Social media links for the footer
+socials = [
+    { name = "github", url = "https://github.com/Nilirad", icon = "github" }
+]
+
+# Content Security Policy (CSP) headers config
+allowed_domains = [
+    { directive = "font-src", domains = ["'self'", "data:", "https://cdnjs.cloudflare.com"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "media-src", domains = ["'self'", "https://cdn.jsdelivr.net/"] },
+    { directive = "script-src", domains = ["'self'"] },
+    { directive = "style-src", domains = ["'self'", "https://cdnjs.cloudflare.com"] },
+    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+]
+
+# microformats2 / h-card configuration
+[extra.hcard]
+enable = true
+avatar = "cat_avatar_resized.png"
