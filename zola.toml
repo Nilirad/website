@@ -30,6 +30,22 @@ menu = [
     { name = "about", url = "about", trailing_slash = true },
 ]
 
+# Appearance
+skin = "mint"
+
+# Table of Contents (ToC)
+toc = true
+
+# Remote Repository Integration
+remote_repository_url = "https://github.com/Nilirad/website"
+remote_repository_git_platform = "auto"
+remote_repository_branch = "main"
+show_remote_changes = true
+show_remote_source = true
+
+# Post Navigation
+show_previous_next_article_links = true
+
 # Social media links for the footer
 socials = [
     { name = "github", url = "https://github.com/Nilirad", icon = "github" }
